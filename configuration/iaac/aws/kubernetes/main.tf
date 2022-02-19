@@ -27,11 +27,11 @@ provider "kubernetes" {
  // version                = "~> 1.9"
 }
 
-module "aforo255-cluster6AV" {
+module "aforo255-cluster6EM" {
   source          = "terraform-aws-modules/eks/aws"
-  cluster_name    = "aforo255-cluster6AV"
+  cluster_name    = "aforo255-cluster6EM"
   cluster_version = "1.21"
-  subnet_ids         = ["subnet-adfa07f2", "subnet-a3c23d82"]  #CHANGE # Donot choose subnet from us-east-1e
+  subnet_ids         = ["subnet-013d1d0a5f7473d8f", "subnet-0c2259b303624184c", "subnet-0177cda6ac3105b10", "subnet-04237c234f1a09a80", "subnet-01906a2c1dbb31099", "subnet-008e63130bc337a43"]  #CHANGE # Donot choose subnet from us-east-1e
   #subnets = data.aws_subnet_ids.subnets.ids
   vpc_id          = aws_default_vpc.default.id
   #vpc_id         = "vpc-1234556abcdef" 
@@ -41,11 +41,11 @@ module "aforo255-cluster6AV" {
 }
 
 data "aws_eks_cluster" "cluster" {
-  name = module.aforo255-cluster6AV.cluster_id
+  name = module.aforo255-cluster6EM.cluster_id
 }
 
 data "aws_eks_cluster_auth" "cluster" {
-  name = module.aforo255-cluster6AV.cluster_id
+  name = module.aforo255-cluster6EM.cluster_id
 }
 
 
