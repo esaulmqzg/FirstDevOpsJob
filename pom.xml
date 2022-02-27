@@ -42,9 +42,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
-	</build>
-	
-	
+	</build>	
 <packaging>${packaging.type}</packaging>	
 <profiles>
    <profile>
@@ -69,5 +67,4 @@
        </dependencies>
    </profile>
 </profiles>
-
 </project>
